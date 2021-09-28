@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 <style>
     .home{
         width: 100vw;
@@ -34,11 +40,10 @@
     * {
         margin:0px;
         padding: 0px;
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif  !important;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
     }
     h1{
         width: 33%;
-        margin-top: 30vh;
     }
     a{
         background-color: lightsalmon;
@@ -82,8 +87,10 @@
     img{
         border-radius: 10px;
     }
-    
-
+    code{
+        background-color: lightgrey;
+        font-family: 'Courier New', Courier, monospace;
+    }
     
 </style>
 
@@ -108,13 +115,13 @@
         <li style="display: inline;"><a href="#example">examples</a></li>
         </ul>
         
-        <center><h4 style="margin-top: -35px;" >Firstname Lastname</h4></center> 
+        <h4 style="margin-top: -35px; margin-left: 80vw;" >Firstname Lastname</h4>
     </div>
 
     <div id="home" class="home" style="z-index:1000;" >
         <div>
             <p>&nbsp;</p>
-            <center><h1>Firstname Lastname</h1>
+            <center><h1 style="margin-top: 30vh;">Firstname Lastname</h1>
             
             <div style="width:40%;">
                 <p style="text-align: center; padding-top: 25px;">
@@ -125,7 +132,7 @@
             <div style="width: 100%; padding-top: 50px;">
                 <a href="#slides"> slides </a>
                 <a href="#tutorial"> tutorial </a>
-                <a href="#research"> examples </a>
+                <a href="#example"> examples </a>
             </div>
             </center>
             <img src="https://epod.usra.edu/M101LRGBChumackLRwebinv.jpg" width="100%" style="margin-top: 100px;">
@@ -135,7 +142,7 @@
     <div id="slides" class="titleslide" >
         <div>
             <p>&nbsp;</p>
-            <center><h1>Bulding a Webpage!</h1>
+            <center><h1 style="margin-top: 30vh;">Bulding a Webpage!</h1>
                 <h3>by Jacob Isbell</h3>
                 <h3>GC Retreat 29 September 2021</h3>
             </center>
@@ -163,7 +170,7 @@
     <div id="slides" class="titleslide" style="background-color: #6EC9FF;">
         <div>
             <p>&nbsp;</p>
-            <center><h1>Why should I have a website?</h1>
+            <center><h1 style="margin-top: 30vh;">Why should I have a website?</h1>
             </center>
         </div>
     </div>
@@ -192,7 +199,7 @@
     <div id="slides" class="titleslide" style="background-color: #6EC9FF;">
         <div>
             <p>&nbsp;</p>
-            <center><h1>What should I put on my website?</h1>
+            <center><h1 style="margin-top: 30vh;">What should I put on my website?</h1>
                 <h2>(Think about the target audience!)</h2>
             </center>
         </div>
@@ -229,7 +236,7 @@
     <div id="slides" class="titleslide" style="background-color: #6EC9FF;">
         <div>
             <p>&nbsp;</p>
-            <center><h1>How should it look?</h1>
+            <center><h1 style="margin-top: 30vh;">How should it look?</h1>
                 <h2>(A question of taste?)</h2>
             </center>
         </div>
@@ -310,7 +317,7 @@
     <div class="titleslide" style="background-color: #6EC9FF;">
         <div>
             <p>&nbsp;</p>
-            <center><h1>How hard could it be?</h1>
+            <center><h1 style="margin-top: 30vh;">How hard could it be?</h1>
             </center>
         </div>
     </div>
@@ -350,57 +357,229 @@
     <div id="tutorial" class="titleslide" >
         <div>
             <p>&nbsp;</p>
-            <center><h1>Some HTML/CSS Basics</h1>
+            <center><h1 style="margin-top: 30vh;">Some HTML/CSS Basics</h1>
             </center>
         </div>
     </div>
 
-    <div class="bodyslide" >
+    <div class="bodyslide" style="height: 140vh;" >
         <div>
             <p>&nbsp;</p>
             <h2 style="margin-left: 30vw; margin-top: 10vh;">HTML Basics</h2>
                 <ul style="margin-left: 30vw; margin-top: 5vh;">
-                    <li>It's never been easier to make a clean, informative page</li>
-                    <li>HTML/CSS are your friends!</li>
-                    <li>Templates are so numerous they're hard to avoid</li>
+                    <li>Not a real programming language, just a formatting tool</li>
+                    <li>Organized into "tags"</li>
+                    <li>You only need a few </li>
+                </ul>
+
+                <center><h3>"p" for paragraph</h3></center>
+                <ul style="margin-left: 30vw; margin-top:10px; list-style-type: none;">
+                    
+                    <li><code> &lt;p&gt; This is an example. &lt;/p&gt;  </code>  </li>
+                    <li><p>This is an example.</p>   </li>
+                    
+                </ul>
+
+                <center><h3 style="margin-top: 20px;">"a" for links</h3></center>
+                <ul style="margin-left: 30vw; margin-top:10px; list-style-type: none;">
+                    
+                    <li><code> &lt;a href="link_url"&gt; Displayed Text &lt;/a&gt;  </code>  </li>
+                    <li> <a href="#tutorial"> Displayed Text</a>   </li>
+                    
+                </ul>
+
+                <center><h3 style="margin-top: 20px;">"h?" for headers (h1,h2,h3,...) </h3></center>
+                <ul style="margin-left: 30vw; margin-top:10px; list-style-type: none;">
+                    
+                    <li><code> &lt;h2&gt; This is an example. &lt;/h2&gt;  </code>  </li>
+                    <li><h2>This is an example.</h2>   </li>
+                    
+                </ul>
+
+                <center><h3 style="margin-top: 20px;">"img" for images </h3></center>
+                <ul style="margin-left: 30vw; margin-top:10px; list-style-type: none;">
+                    
+                    <li><code> &lt;img src="image_url" width="100" &gt;  </code>  </li>
+                    <li> <img src="data:image/jpeg;base64,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" width="100">   </li>
+                    
+                </ul>
+
+                <center><h3 style="margin-top: 20px;">"Finally, tags are organized in "div" dividers </h3></center>
+                <ul style="margin-left: 30vw; margin-top:10px; list-style-type: none;">
+                    
+                    <li><code> &lt;div&gt; <br> &lt;p&gt; This is an example. &lt;/p&gt; <br> &lt;/div&gt;  </code>  </li>
+                    <li><p>This is an example.</p>   </li>
                     
                 </ul>
                 
-                <center>
-                    <h3 style="margin-top: 40px;">There's nothing wrong with using a template as long as it's cited!</h3>
-                </center>
+                
             
-            <h2 style="margin-left: 30vw; margin-top: 10vh;">Hosting</h2>
-            <ul style="margin-left: 30vw; margin-top: 5vh;">
-                <li>Github offers free hosting</li>
-                <li>MPIA will host your one-pager</li>
-                <li>Numerous other options including AWS and self-hosting</li>
-            </ul>
+        </div>
+    </div>
+
+    <div class="bodyslide" style="height: 140vh;" >
+        <div>
+            <p>&nbsp;</p>
+            <h2 style="margin-left: 30vw; margin-top: 10vh;">CSS Basics</h2>
+                <ul style="margin-left: 30vw; margin-top: 5vh;">
+                    <li>Cascading Style Sheets</li>
+                    <li>Applies formatting to your html</li>
+                    <li>Infinite tweaking possible </li>
+                    <li>Added with style keyword or in css file.</li>
+                </ul>
+
+                <center><h3 style="margin-top: 25px;">Example Styling</h3></center>
+                <ul style="margin-left: 30vw; margin-top:10px; list-style-type: none;">
+                    
+                    <li><code> &lt;p style="font-style:italic; color:lightsalmon;"&gt; This is an example. &lt;/p&gt;  </code>  </li>
+                    <li><p style="font-style: italic; color:lightsalmon ">This is an example.</p>   </li>
+                    
+                </ul>
+
+                <center><h3 style="background-color:#6EC9FF; margin-top:50px;">Useful Links</h3></center>
+                <ul style="margin-left: 30vw; margin-top: 25px;">
+                    <li><a href="https://www.w3schools.com/css/default.asp" > W3 Schools  </a></li>
+                    <li><a href="https://color.adobe.com/create" > Color Palette Selector  </a></li>
+                </ul>            
+        </div>
+    </div>
+
+    <div id="example" class="home" style="z-index:1000;" >
+        <div>
+            <p>&nbsp;</p>
+            <center><img src="jacob2019.jpg" width="500" style="margin-top: 10vh;"></center>
+            <center><h1>Jacob Isbell</h1>
+            <div style="width:40%;">
+                <p style="text-align: justify; padding-top: 25px;">
+                    I'm a PhD student at the Max Planck Institute for Astronomy working mostly with VLTI-MATISSE. I am primarily interested in galaxy evolution and the mechanisms that drive it. 
+                </p>
+            </div>
 
             
-            <center>
-                <h3 style="margin-top: 100px;">We'll use github today</h3>
+
+            <div style="width: 100%; padding-top: 50px;">
+                <a href="#research"> research </a>
+                <a href="#about"> about me </a>
+                <a href="#contact"> contact me </a>
+            </div>
             </center>
-            
+            <img src="https://epod.usra.edu/M101LRGBChumackLRwebinv.jpg" width="100%" style="margin-top: 100px;">
         </div>
     </div>
 
 
 
-    <div id="research" class="research" >
+    <div id="research" class="research" style="height: auto;">
         <div>
             <p>&nbsp;</p>
-            <center><h1>What I Do</h1>
+            <center><h1 style="margin-top: 10vh;" >What I Do</h1>
             
             <div style="width:40%;">
                 <p style="text-align: justify;">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    The main focus of my thesis is to understand the dusty envelopes of active galactic nuclei (AGN). To do this, we use near-infrared spectro-interferometry to probe the dust at high resolution. Using a new instrument at the VLTI, MATISSE (Multi AperTure mid-Infrared SpectroScopic Experiment), which combines 4 telescopes, we hope to image the dust tori for the first time, giving an unprecedented glimpse into the "pantries" which feed the AGN. 
                 </p>
+
+                <p style="margin-top: 25px; text-align: justify;">
+                    AGN are thought to play a major role in turning off star formation in their host galaxies, turning young, blue galaxies with many young stars into red and dead galaxies with primarily old stars and little new star formation. How exactly these powerful "engines" at the centers of galaxies regulate global star formation is not well understood. Moreover, while every galaxy has a supermassive black hole (SMBH) at the center, not every galaxy has an AGN. What exactly triggers an active phase and fuels the AGN? Through studying the dusty regions around AGN, we can better understand how gas accretes onto the SMBH and causes an active phase. 
+                </p>
+
+                <img src="https://imagine.gsfc.nasa.gov/science/objects/images/agn_structure.png" width="300" style="margin-top: 20px;">
+
+                <img src="https://www.eso.org/sci/facilities/paranal/telescopes/vlti/vlti-array-smallsize.jpg" width="300" style="padding-top: 20px;" >
             </div>
 
             
         </div>
     </div>
+
+    <div id="research" class="research" style="height: auto;">
+        <div>
+            <p>&nbsp;</p>
+            <center><h1 style="margin-top: 10vh;" >Recent Work</h1>
+            
+                <div style="margin-top: 40px;">
+
+                <p style="padding: 50px;">A complete and always up-to-date list can be found here: <a href="http://adsabs.harvard.edu/cgi-bin/nph-abs_connect?return_req=no_params&author=Isbell,%20Jacob%20W.&db_key=AST">ADS</a></p>
+                
+                <a style="font-weight: bolder; color:lightsalmon; font-size: larger; text-align: justify; padding: 10px; background-color: transparent;" href="https://ui.adsabs.harvard.edu/abs/2021ApJ...910..104I/abstract">Subarcsecond Mid-infrared View of Local Active Galactic Nuclei. IV. The L- and M-band Imaging Atlas </a>
+                
+                <p style="text-align: justify; margin-top: 25px; width:45vw;" > by Isbell, Jacob W.; Burtscher, Leonard; Asmus, Daniel; Pott, Jörg-Uwe; Couzy, Paul; Stalevski, Marko; Gámez Rosas, Violeta; Meisenheimer, Klaus
+                </p> 
+        
+                <p style="text-align: justify;width:45vw;"> 
+                    <strong>Abstract:</strong>   We present the largest currently existing subarcsecond 3-5 μm atlas of 119 local (z < 0.3) active galactic nuclei (AGNs). This atlas includes AGNs of five subtypes: 22 are Seyfert 1; five are intermediate Seyferts; 46 are Seyfert 2; 26 are low-ionization nuclear emission regions; and 20 are composites/starbursts. Each active galactic nucleus was observed with the Very Large Telescope Infrared Spectrometer and Array Camera (ISAAC) in the L and/or M bands between 2000 and 2013. We detected at 3σ confidence 92 sources in the L band and 83 sources in the M band. We separated the flux into unresolved nuclear flux and resolved the flux through two-Gaussian fitting. We report the nuclear flux, extended flux, apparent size, and position angle of each source, giving 3σ upper limits for sources that are undetected. Using Wide-field Infrared Survey Explorer (WISE) W1- and W2-band photometry we derived relations predicting the nuclear L and M fluxes for Sy1 and Sy2 AGNs based on their W1-W2 color and WISE fluxes. Lastly, we compare the measured mid-infrared colors to those predicted by dusty torus models SKIRTOR, CLUMPY, CAT3D, and CAT3D-WIND, finding the best agreement with the latter. We find that models including polar winds best reproduce the 3-5 μm colors, indicating that it is an important component of dusty torus models. We found that several AGNs are bluer than models predict. We discuss several explanations for this and find that it is most plausibly stellar light contamination within the ISAAC L-band nuclear fluxes.
+                </p> 
+        
+                </div>
+        
+                <div style="margin-top: 50px;" >
+                
+                <a style="color:lightsalmon; font-weight: bolder; font-size: larger; background-color: transparent;" href="https://iopscience.iop.org/article/10.3847/2041-8213/aaf872/pdf">The Evolution of Molecular Gas Fraction Traced by the CO Tully-Fisher Relation</a>
+                
+                <p style="margin-top: 40px;width:45vw;"> by Isbell, Jacob W.; Xue, Rui; Fu, Hai
+                </p> 
+        
+                <p style="margin-top: 25px; text-align: justify; width:45vw;"> 
+                <strong>Abstract:</strong>   Carbon monoxide (CO) observations show a luminosity$-$line-width correlation that evolves with redshift. We present a method to use CO measurements alone to infer the molecular gas fraction ($f_{\rm mol}$) and constrain the CO$-$H$_2$ conversion factor ($\alpha_{\rm CO}$). We compile from the literature spatially integrated low-$J$ CO observations of six galaxy populations, including a total of 449 galaxies between $0.01 \leq z \leq 3.26$. The CO data of each population provide an estimate of the $\alpha_{\rm CO}$-normalized mean molecular gas fraction ($f_{\rm mol}/\alpha_{\rm CO}$). The redshift evolution of the luminosity$-$line-width correlation thus indicates an evolution of $f_{\rm mol}/\alpha_{\rm CO}$. We use a Bayesian-based Monte-Carlo Markov Chain sampler to derive the posterior probability distribution functions of $f_{\rm mol}/\alpha_{\rm CO}$ for these galaxy populations, accounting for random inclination angles and measurement errors in the likelihood function. We find that the molecular gas fraction evolves rapidly with redshift, $f_{\rm mol} \propto (1+z)^\beta$ with $\beta \simeq 2$, for both normal star-forming and starburst galaxies. Furthermore, the evolution trend agrees well with that inferred from the Kennicutt-Schmidt relation and the star-forming main sequence. Finally, at $z < 0.1$ normal star-forming galaxies require a $\sim5\times$ larger $\alpha_{\rm CO}$ than starburst galaxies to match their molecular gas fractions, but at $z > 1$ both star-forming types exhibit sub-Galactic $\alpha_{\rm CO}$ values and normal star-forming galaxies appear more gas-rich than starbursts. Future applications of this method include calibrating Tully-Fisher relations without inclination correction and inferring the evolution of the atomic gas fraction with HI observations.
+                </p> 
+            
+            </center>
+            
+        </div>
+
+        <div id="about" class="research" style="height: auto; min-height: 100vh;">
+            <div>
+                <p>&nbsp;</p>
+                <center><h1 style="margin-top: 10vh;" >Brief Bio</h1>
+                
+                    <div style="width: 45vw;">
+                        <p style="text-align: justify; margin-top: 50px;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+
+                        <p style="text-align: justify; margin-top: 25px;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+
+                        <img src="https://imagine.gsfc.nasa.gov/science/objects/images/agn_structure.png" width="300" style="margin-top: 20px;">
+
+                        <img src="https://www.eso.org/sci/facilities/paranal/telescopes/vlti/vlti-array-smallsize.jpg" width="300" style="padding-top: 20px;" >
+                    </div>
+                    
+                    
+                </center>
+                
+            </div>
+        </div>
+
+        <div id="contact" class="research" style="height: auto; min-height: 100vh;">
+            <div>
+                <p>&nbsp;</p>
+                <center><h1 style="margin-top: 10vh;" >Contact Me </h1>
+                
+                    <div style="width: 45vw;">
+                        <p style="text-align: justify; margin-top: 50px;">
+                            Don't forget to like and subscribe! Smash that like button and hit the bell to stay up to date with all of my content.
+                        </p>
+
+                        <p style="text-align: justify; margin-top: 25px;">
+                            Here you can link to your social media, insitute pages, etc. Don't put your email in in "raw" text though because it can be scraped and then you'll get spam.
+                        </p>
+
+                        <p style="text-align: justify; margin-top: 25px; padding-bottom: 50px;">
+                            Speaking of youtube, you can easily embed youtube, instagram, etc posts by clicking "Share" and then "Embed"
+                        </p>
+
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/5qap5aO4i9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                        
+                    </div>
+                    
+                    
+                </center>
+                
+            </div>
+        </div>
 
 
     
